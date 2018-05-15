@@ -40,3 +40,13 @@ def over?(board)
     return true
   end
 end
+def winner(board)
+  win_array = won?(board)
+  if win_array == false
+    return nil
+  elsif win_array.all? { |index| board[index] == "X" }
+    return "X"
+  elsif win_array.all? { |index| board[index] == "O" }
+    return "O"
+  end
+end
