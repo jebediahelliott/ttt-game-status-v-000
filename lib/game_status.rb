@@ -35,6 +35,6 @@ def draw?(board)
 end
 def over?(board)
   if WIN_COMBINATIONS.any? { |win| win == won?(board) }
-
+    return true
   end
 end
